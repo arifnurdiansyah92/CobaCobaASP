@@ -1,0 +1,64 @@
+﻿@model CobaCoba.Models.Buku
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Buku</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input asp-for="BukuId" type="hidden" />
+        <input type="hidden" asp-for="BukuId" />
+        <div class="form-group">
+            <label asp-for="judul" class="control-label"></label>
+            <input asp-for="judul" class="form-control" />
+            <span asp-validation-for="judul" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="penulis" class="control-label"></label>
+            <input asp-for="penulis" class="form-control" />
+            <span asp-validation-for="penulis" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="tahunTerbit" class="control-label"></label>
+            <input asp-for="tahunTerbit" class="form-control" />
+            <span asp-validation-for="tahunTerbit" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="harga" class="control-label"></label>
+            <input asp-for="harga" class="form-control" />
+            <span asp-validation-for="harga" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" id="btn" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    <script>
+        $("#btn").click(function () {
+            var buku = { bukuId: $("#BukuId").val(),judul: $("#judul").val(), penulis: $("#penulis").val(), tahunTerbit: $("#tahunTerbit").val(), harga: $("#harga").val() };
+            $.ajax({
+                type: "PUT",
+                contentType: 'application/json',
+                data: JSON.stringify(buku),
+                dataType: 'json',
+                url: "/api/buku/" + $("#BukuId").val(),
+                contentType: "application/json",
+                success: function () {
+                    alert("Sukses");
+                    location.assign("https://localhost:44320/buku/list");
+                }
+            });
+        });
+    </script>
+}

@@ -1,0 +1,41 @@
+﻿@model IEnumerable<CobaCoba.Models.Siswa>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.nama)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kelas)
+            </th>
+            <th>Aksi</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                <a href="/siswa/details/@Html.DisplayFor(modelItem => item.SiswaId)">@Html.DisplayFor(modelItem => item.nama)</a>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kelas.tingkat) - @Html.DisplayFor(modelItem => item.Kelas.jurusan)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.SiswaId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.SiswaId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.SiswaId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

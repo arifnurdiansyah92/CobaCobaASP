@@ -1,0 +1,45 @@
+﻿@model CobaCoba.Models.Buku
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Buku</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.judul)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.judul)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.penulis)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.penulis)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.tahunTerbit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.tahunTerbit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.harga)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.harga)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="BukuId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

@@ -1,0 +1,11 @@
+D:\C#\CobaCoba\CobaCoba\bin\Debug\netcoreapp2.0\CobaCoba.deps.json
+D:\C#\CobaCoba\CobaCoba\bin\Debug\netcoreapp2.0\CobaCoba.runtimeconfig.json
+D:\C#\CobaCoba\CobaCoba\bin\Debug\netcoreapp2.0\CobaCoba.runtimeconfig.dev.json
+D:\C#\CobaCoba\CobaCoba\bin\Debug\netcoreapp2.0\CobaCoba.dll
+D:\C#\CobaCoba\CobaCoba\bin\Debug\netcoreapp2.0\CobaCoba.pdb
+D:\C#\CobaCoba\CobaCoba\obj\Debug\netcoreapp2.0\CobaCoba.csproj.CoreCompileInputs.cache
+D:\C#\CobaCoba\CobaCoba\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\C#\CobaCoba\CobaCoba\obj\Debug\netcoreapp2.0\CobaCoba.AssemblyInfoInputs.cache
+D:\C#\CobaCoba\CobaCoba\obj\Debug\netcoreapp2.0\CobaCoba.AssemblyInfo.cs
+D:\C#\CobaCoba\CobaCoba\obj\Debug\netcoreapp2.0\CobaCoba.dll
+D:\C#\CobaCoba\CobaCoba\obj\Debug\netcoreapp2.0\CobaCoba.pdb

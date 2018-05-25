@@ -1,0 +1,47 @@
+﻿@model IEnumerable<CobaCoba.Models.Food>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.nama)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.deskripsi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.harga)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nama)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.deskripsi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.harga)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.foodId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.foodId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.foodId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

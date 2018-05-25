@@ -1,0 +1,33 @@
+﻿@model CobaCoba.Models.Siswa
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Siswa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nama)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.nama)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Kelas)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Kelas.KelasId)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="SiswaId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

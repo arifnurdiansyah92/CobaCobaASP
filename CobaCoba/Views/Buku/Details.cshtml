@@ -1,0 +1,42 @@
+﻿@model CobaCoba.Models.Buku
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Buku</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.judul)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.judul)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.penulis)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.penulis)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.tahunTerbit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.tahunTerbit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.harga)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.harga)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.BukuId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

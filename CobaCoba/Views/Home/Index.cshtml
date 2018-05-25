@@ -1,0 +1,36 @@
+﻿@model IEnumerable<CobaCoba.Models.Food>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="row">
+    @foreach (var item in Model)
+    {
+    <div class="col-md-3">
+        <div id="product">
+            <h2>
+                @Html.DisplayFor(modelItem => item.nama)
+            </h2>
+            <p>
+                @Html.DisplayFor(modelItem => item.deskripsi)
+            </p>
+            <p>
+                @Html.DisplayFor(modelItem => item.harga)
+            </p>
+        </div>
+
+        <div class="text-right">
+            <button class="btn btn-primary" onclick="beli('@Html.DisplayFor(modelItem => item.nama)')">Beli</button>
+        </div>
+    </div>
+
+    }
+</div>
+@section Scripts{ 
+<script>
+    function beli(nama) {
+        alert(`Terimakasih Telah Membeli ${nama}`);
+
+    }
+</script>
+}

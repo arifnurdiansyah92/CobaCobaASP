@@ -1,0 +1,30 @@
+﻿@model CobaCoba.Models.Siswa
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Siswa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nama)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.nama)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Kelas)
+        </dt>
+        <dd>
+            <a href="/kelas/details/@Html.DisplayFor(model => model.Kelas.KelasId)">@Html.DisplayFor(model => model.Kelas.tingkat) - @Html.DisplayFor(model => model.Kelas.jurusan)</a>
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.SiswaId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
