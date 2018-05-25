@@ -6,3 +6,5 @@ Pada Project ini terdapat :
 - CRUD Data
 - CRUD Data Dengan API
 - Menampilkan Data Dengan ViewData
+
+API terdapat pada folder Controller/API
